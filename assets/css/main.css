@@ -1,0 +1,137 @@
+.header{
+    height: 120px;
+    background: linear-gradient( rgb(243, 33, 68), rgb(243, 164, 164));
+}
+
+/* The cha */
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* The ul */
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0px;
+}
+
+/* display:none; o header__qr vaf display:block; class con nay cua no */
+/* an vao se hien len maQR roi tat */
+.header__navbar-item--has-qr:hover .header__qr{
+    display: block;
+}
+
+/*  The li */
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 400;  
+}
+ /* 1.5 rem = 15px */
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover,
+.header__navbar-icon-link:hover{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header__navbar-item{
+    margin: 0 8px;
+    position: relative;
+    min-height: 18px;
+}
+
+.header__navbar-item--strong{
+    font-weight: 600;
+}
+
+.header__navbar-item--separate::after{
+    content: "";   
+    position: absolute;
+    border-right: 1px solid #fff;
+    height: 11px;
+    right: -9px;
+    top: 2px;
+
+    /* Hoac lam bang cach Border-left nhu sau: */
+    /* border-left: 1px solid #fff ;
+    height: 12px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon{
+    font-size: 1.8rem;
+    /* 1.8rem tuong duong 18px */
+    margin: 0 4px 0;
+}
+
+
+/* Css cho cac icon dung vi tri */
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-title--no-pointer{
+    cursor: text;
+    /* di chuot vao khong con la pointer ma la text */
+    color: var(--white-color);
+}
+
+.header__qr{
+    width: 130px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 130%;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+}
+
+.header__qr-apps{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* khong khuyen khich su dung :nth-child() */
+.header__qr-link:nth-child(1){
+    margin-left: 0px;
+}
+
+.header__qr-link:nth-child(1){
+    margin-right: 5px;
+}
+
+.header__qr-img{
+    width: 100%;
+}
+
+.header__qr-download-img{
+    height: 13px;
+}
+
+/* element */
+.header__qr::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    width: 100%;
+    top: -10px;
+}
