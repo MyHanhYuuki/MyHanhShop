@@ -1,0 +1,43 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: rgb(66, 66, 66);
+    --primary-color: rgb(253, 127, 154);
+    --border-color: #c5c4c4;
+    --hover-color: #fddce5;
+
+    --navbar-height: 34px;
+    --header-height: 140px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+    box-sizing: inherit;
+    /* inherit: kế thừa từ thẻ chứa nó * la ap dung cho tat ca cac file html co link den file css nay */
+}
+
+ html{
+     /* mac dinh font-size 100% la 16px */
+     font-size: 62.5%;
+     line-height: 1.6rem;
+     font-family: 'Roboto', sans-serif;
+     box-sizing: border-box;
+ }
+
+ .grid{
+     width: 1000px;
+     max-width: 100%;
+     margin: 0 auto;
+     /* neu man hinh nho hon 1200, thi max-width giam kich thuoc xuong con vua du */
+ }
+
+ .grid__full-width{
+     width: 100%;
+ }
+
+ .grid__row{
+     display:  flex;
+     flex-wrap: wrap;
+     /* cac thuoc tinh nam ngang */
+     /* tong do dai qua grid__row se duoc xuong hang */
+ }
