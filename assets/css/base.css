@@ -1,0 +1,132 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: rgb(66, 66, 66);
+    --primary-color: rgb(253, 127, 154);
+    --border-color: #c5c4c4;
+    --hover-color: #ffe2e4;
+    --solid-color: rgb(224, 174, 205);
+    --text-primary-color: #ff0464;
+
+    --navbar-height: 34px;
+    --header-height: 140px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+    box-sizing: inherit;
+    /* inherit: kế thừa từ thẻ chứa nó * la ap dung cho tat ca cac file html co link den file css nay */
+}
+
+ html{
+     /* mac dinh font-size 100% la 16px */
+     font-size: 62.5%;
+     line-height: 1.6rem;
+     font-family: 'Roboto', sans-serif;
+     box-sizing: border-box;
+ }
+
+/* Grid - cau truc chung: (trong grid co nhieu row, trong row co nhieu column)
+           grid{
+               grid__row-1{
+                   grid__column-2{};
+                   grid__column-tenColumn-10{};
+                   ...
+               }
+
+               grid__row-2{
+                   grid__column-2{};
+                   grid__column-tenColumn-10{};
+                   ...
+               }               ...
+           }
+*/
+
+ .grid{
+     width: 1000px;
+     max-width: 100%;
+     margin: 0 auto;
+     /* neu man hinh nho hon 1200, thi max-width giam kich thuoc xuong con vua du */
+ }
+
+ .grid__full-width{
+     width: 100%;
+ }
+
+ .grid__row{
+     display:  flex;
+     flex-wrap: wrap;
+     /* cac thuoc tinh nam ngang */
+     /* tong do dai qua grid__row se duoc xuong hang */
+     margin-left: -12px;
+     margin-right: -12px;
+ }
+
+ /* Test sẽ sua sau khi co responsive */
+ .grid__column-2{
+     padding-left: 12px;
+     padding-right: 12px;
+     width: 16.6667%;
+ }
+
+ .grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-6{
+    padding-left: 5px;
+    padding-right: -25px;
+    width: 50%;
+
+}
+
+ .grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
+ }
+ 
+/* Patination */
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 8px;
+}
+
+.pagination-item span{
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+
+.patination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+}
+
+.pagination-item__link{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.55rem;
+    color: var(--black-color);
+    min-width: 40px;
+    --height: 30px;
+    height: var(--height);
+    line-height: var(--height);
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.pagination-item-icon{
+    font-size: 1.4rem;
+}
